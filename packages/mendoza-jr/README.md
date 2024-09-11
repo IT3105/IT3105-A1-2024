@@ -18,4 +18,11 @@ NODE MODULES USED
 +-- react-dom@18.3.1
 +-- react-modal@3.16.1
 +-- react@18.3.1
-`-- vite@5.4.3
++-- vite@5.4.3
+```
+
+>npm run dev
+>run localhost
+>install dependencies if necessary/errors
+
+! no backend and database used

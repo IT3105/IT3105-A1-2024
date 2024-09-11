@@ -1,6 +1,6 @@
 # React + Vite
 
-~NODE MODULES USED~
+NODE MODULES USED
 
 ```sh
 +-- @eslint/js@9.9.1

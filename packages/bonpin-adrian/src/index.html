@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    class="html"
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="shortcut icon"
+            href="icon.png"
+        />
+        <!--Import Styles -->
+        <link
+            rel="stylesheet"
+            href="globals.css"
+        />
+        <!--Title -->
+        <title>Bookmark Manager</title>
+    </head>
+    <body>
+        <!-- Top Bar -->
+        <nav>
+            <h4>Bookmarks</h4>
+            <div id="create">+ Add Bookmark</div>
+        </nav>
+        <!-- Create -->
+        <form
+            id="create-form"
+            class="create"
+        >
+            <h6>Add a link!</h6>
+            <div>
+                <svg
+                    id="create-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x"
+                >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </div>
+            <label for="name">Site Name</label>
+            <input
+                name="name"
+                placeholder="Facebook"
+                type="text"
+                required
+                minlength="4"
+            />
+            <label for="url">Site URL</label>
+            <input
+                name="url"
+                placeholder="https://facebook.com"
+                type="text"
+                required
+                minlength="5"
+            />
+            <button type="submit">Save Link!</button>
+        </form>
+        <!-- Edit -->
+        <form
+            id="edit-form"
+            class="edit"
+        >
+            <h6>Edit link</h6>
+            <div id="edit-close">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x"
+                >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </div>
+            <label for="name">Site Name</label>
+            <input
+                name="name"
+                placeholder="Facebook"
+                type="text"
+            />
+            <label for="url">Site URL</label>
+            <input
+                name="url"
+                placeholder="https://facebook.com"
+                type="text"
+            />
+            <input type="hidden" name="id">
+            <button type="submit">Save Changes!</button>
+        </form>
+        <!-- Main Content -->
+        <main id="main"></main>
+    </body>
+</html>
+
+<script>
+    // Append Current Links to DOM
+    const main = document.getElementById("main")
+    const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || []
+
+    function repaint() {
+        main.innerHTML = ""
+        let index = 0
+        bookmarks.forEach((b, idx) => {
+            const div = document.createElement("div")
+            div.id = `bkm-${idx}`
+            div.classList.add("bookmark")
+
+            const h5 = document.createElement("h5")
+            h5.textContent = b.name
+            div.appendChild(h5)
+            
+            const edit = document.createElement("button")
+            edit.textContent = "edit"
+            edit.onclick = () => {
+                editForm.style.display = "grid"
+                document.querySelector("#edit-form input[name='name']").value = b.name
+                document.querySelector("#edit-form input[name='url']").value = b.url
+                document.querySelector("#edit-form input[name='id']").value = idx
+            }
+            h5.appendChild(edit)
+            
+            const a = document.createElement("a")
+            a.href = String(b.url).includes("http") ? b.url : `https://${b.url}`
+            a.textContent = String(b.url).includes("http") ? b.url : `https://${b.url}`
+            div.appendChild(a)
+            
+            const div2 = document.createElement("div")
+            div2.onclick = () => deleteLink(idx)
+
+            const svg = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "svg"
+            )
+            svg.setAttributeNS(null, "width", "24")
+            svg.setAttributeNS(null, "height", "24")
+            svg.setAttributeNS(null, "viewBox", "0 0 24 24")
+            svg.setAttributeNS(null, "fill", "none")
+            svg.setAttributeNS(null, "stroke", "currentColor")
+            svg.setAttributeNS(null, "stroke-width", "2")
+            svg.setAttributeNS(null, "stroke-linecap", "round")
+            svg.setAttributeNS(null, "stroke-linejoin", "round")
+            svg.classList.add("lucide", "lucide-trash")
+
+            const path = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "path"
+            )
+            path.setAttributeNS(null, "d", "M3 6h18")
+            svg.appendChild(path)
+
+            const path2 = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "path"
+            )
+            path2.setAttributeNS(
+                null,
+                "d",
+                "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+            )
+            svg.appendChild(path2)
+
+            const path3 = document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "path"
+            )
+            path3.setAttributeNS(
+                null,
+                "d",
+                "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+            )
+            svg.appendChild(path3)
+
+            div2.appendChild(svg)
+
+            div.appendChild(div2)
+
+            main.appendChild(div)
+
+            index++
+        })
+    }
+    repaint()
+    // Create
+    const create = document.getElementById("create")
+    const closeCreate = document.getElementById("create-close")
+    const createForm = document.getElementById("create-form")
+
+    create.onclick = () => {
+        createForm.style.display = "grid"
+    }
+    closeCreate.onclick = () => {
+        createForm.style.display = "none"
+    }
+
+    const saveToLocalStorage = () => {
+        localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
+    }
+
+    const form = document.getElementById("create-form")
+    form.onsubmit = (e) => {
+        e.preventDefault()
+        const name = document.querySelector(
+            "#create-form input[name='name']"
+        ).value
+        const url = document.querySelector(
+            "#create-form input[name='url']"
+        ).value
+        bookmarks.push({ name, url })
+        saveToLocalStorage()
+        form.reset()
+        createForm.style.display = "none"
+        repaint()
+    }
+
+    // Delete
+    const deleteLink = (idx) => {
+        bookmarks.splice(idx, 1)
+        saveToLocalStorage()
+        repaint()
+    }
+
+    // Edit
+    const closeEdit = document.getElementById("edit-close")
+    const editForm = document.getElementById("edit-form")
+    closeEdit.onclick = () => {
+        editForm.style.display = "none"
+    }
+
+    editForm.onsubmit = (e) => {
+        e.preventDefault()
+        const name = document.querySelector(
+            "#edit-form input[name='name']"
+        ).value
+        const url = document.querySelector(
+            "#edit-form input[name='url']"
+        ).value
+        const id = document.querySelector(
+            "#edit-form input[name='id']"
+        ).value
+        bookmarks[id] = { name, url }
+        saveToLocalStorage()
+        editForm.style.display = "none"
+        repaint()
+    }
+</script>

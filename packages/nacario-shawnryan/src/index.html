@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Background</title>
+    <link rel="stylesheet" href="AssDesign.css">
+    <link href="https://fonts.cdnfonts.com/css/good-times" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="section1">
+        <video autoplay muted loop id="background-video" poster="fallback.jpg">
+            <source src="lofi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="logo.png" alt="Logo" class="header-logo">
+        <p class="baba-paragraph">Welcome to Subscription Manager</p>
+        <h1>Discover The Best Pay To Win Websites</h1>
+    </section>
+    <section id="section2">
+        <video autoplay muted loop id="background-video-section2">
+            <source src="polygon.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="about-paragraph">Follow and Like our Facebook Page!</p>
+    </section>
+    
+    <section id="section3">
+        <video autoplay muted loop id="background-video-section3">
+            <source src="room.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="flex-container">
+            <div id="cards-container" class="cards-container">
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="section4">
+        <video autoplay muted loop id="background-video-section4">
+            <source src="dungeon.mp4" type="video/mp4"> 
+            Your browser does not support the video tag.
+        </video>
+        <div class="right-column" id="subscription-details">
+            <table id="subscriptions-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>
+                            Actions
+                            <button onclick="editSubscriptions()">Edit</button>
+                        </th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+            
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+
+    <script src="AssJS.js" async defer></script>
+</body>
+</html>

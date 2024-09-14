@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Background</title>
+    <link rel="stylesheet" href="AssDesign.css">
+    <link href="https://fonts.cdnfonts.com/css/season" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="section1">
+        <video autoplay muted loop id="background-video">
+            <source src="flower.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="logo.png" alt="Logo" class="header-logo">
+        <p class="baba-paragraph">Welcome to Subscription Manager</p>
+        <h1>Discover The Best Pay To Win Websites</h1>
+    </section>
+
+    <section id="section2">
+        <p class="about-paragraph">Follow us on our FB channel</p>
+    </section>
+
+    <section id="section3">
+        <div class="cards-container">
+            <div class="card">
+                <img src="netflix.png" alt="Netflix" class="card-image">
+                <div class="card-content">
+                    <p class="card-description">Enjoy unlimited movies and TV shows with Netflix.</p>
+                    <button class="subscribe-button" onclick="showSubscriptionDetails('netflix')">Subscribe to Netflix</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="spotify.png" alt="Spotify" class="card-image">
+                <div class="card-content">
+                    <p class="card-description">Stream unlimited music and podcasts with Spotify.</p>
+                    <button class="subscribe-button" onclick="showSubscriptionDetails('spotify')">Subscribe to Spotify</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-column" id="subscription-details">
+            <!-- Subscription details will be shown here when a button is clicked -->
+        </div>
+    </section>
+
+    <script src="AssJS.js" async defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+// Function to change background image based on scroll position
+function updateBackgroundImage() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition < windowHeight) {
+        document.body.style.backgroundImage = "url('genshin2.jpg')";
+    } else if (scrollPosition < windowHeight * 2) {
+        document.body.style.backgroundImage = "url('Pillars.jpg')";
+    } else {
+        document.body.style.backgroundImage = ""; // Default background if needed
+    }
+
+    // Ensure the new background images also cover the viewport
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = "fixed"; // Make background constant and fixed
+}
+
+// Function to show subscription details based on the selected service
+function showSubscriptionDetails(service) {
+    const detailsDiv = document.getElementById('subscription-details');
+    let detailsHtml = '';
+
+    switch(service) {
+        case 'netflix':
+            detailsHtml = `
+                <h2>Thank you for subscribing to Netflix!</h2>
+                <p>Enjoy unlimited movies and TV shows with Netflix. Your subscription is active, and you can start streaming now!</p>
+            `;
+            break;
+        case 'spotify':
+            detailsHtml = `
+                <h2>Thank you for subscribing to Spotify!</h2>
+                <p>Stream unlimited music and podcasts with Spotify. Your subscription is active, and you can start listening now!</p>
+            `;
+            break;
+        default:
+            detailsHtml = `
+                <h2>Subscription Error</h2>
+                <p>Sorry, something went wrong. Please try again.</p>
+            `;
+            break;
+    }
+
+    detailsDiv.innerHTML = detailsHtml;
+    detailsDiv.style.display = 'block'; // Show the details
+}
+
+// Add scroll event listener
+window.addEventListener("scroll", updateBackgroundImage);
+
+
+
+
+
+
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Place the video behind the content */
+}
+section {
+    height: 100vh; /* Each section takes the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    flex-wrap: wrap; /* Allow the boxes to wrap if necessary */
+    gap: 20px; /* Add space between content boxes */
+}
+
+
+/* SECTION 1 */
+
+#section1 {
+    position: relative; /* Allow absolute positioning of the elements */
+    overflow: hidden; /* Hide any overflow */
+}
+
+
+.baba-paragraph {
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5em;
+    color: rgb(0, 0, 0);
+    font-family: 'The Seasons', serif;
+    white-space: nowrap;
+}
+
+h1 {
+    position: absolute;
+    bottom: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 50; /* Thin weight */
+    white-space: nowrap;
+}
+
+.header-logo {
+    position: absolute;
+    bottom: 63%; /* Adjust this value to position the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 900px; /* Adjust the size of the logo */
+    z-index: 1; /* Ensure the logo is above the video */
+}
+
+/* SECTION 2 */
+
+#section2 {
+    height: 20vh; /* Height for section2 */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('wood.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the viewport */
+}
+
+
+
+.about-paragraph {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* SECTION 3 */
+
+#section3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-description {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.subscribe-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.right-column {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    border: 2px dashed #aaa;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+#subscription-details {
+    display: none; /* Hidden by default */
+}

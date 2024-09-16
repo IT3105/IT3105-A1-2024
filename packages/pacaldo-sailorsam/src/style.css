@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: wheat;
+    padding: 10px;
+}
+
+.shop-list {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 30px;
+}
+
+.shop-list h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #333fe8;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px;
+    user-select: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Align checkbox and text on the left side */
+ul li .left-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Checkbox styling */
+ul li .check-btn {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Styling for checked items */
+ul li.checked .item-text {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Edit and delete button styling */
+ul li .item-actions {
+    display: flex;
+    align-items: center;
+}
+
+ul li span.edit-btn:hover {
+    background: lightblue;
+    border-radius: 50%;
+}
+
+ul li span.delete-btn:hover {
+    background: rgb(255, 189, 189);
+    border-radius: 50%;
+}
+
+ul li .item-text {
+    flex: 1;
+    padding-right: 10px;
+}

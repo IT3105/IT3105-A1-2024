@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0; /* Light text */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+table {
+  width: 80%;
+  margin: 20px 0; 
+  border-collapse: collapse;
+  background-color: #2e2f30; /* Darker background for the table */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #444; /* Lighter borders */
+}
+
+th {
+  background-color: #3a3b3c; /* Dark header background */
+  font-size: 1.2rem;
+  color: #ffffff; /* White text for table headers */
+}
+
+td {
+  font-size: 1rem;
+  color: #dcdcdc; /* Slightly off-white for table data */
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+#add {
+  font-family: 'Poppins', sans-serif;
+  background-color: #191970; 
+  color: white;
+
+}
+#add:hover {
+  background-color: #101048;; 
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.8);
+}
+
+.status-Button {
+  background-color: #7A4190; 
+  color: white;
+}
+.status-Button:hover {
+  background-color: #4e285d; 
+  box-shadow: 0 4px 10px rgba(83, 68, 115, 0.8);
+}
+
+.edit-Button {
+  background-color: #28a745;
+  color: white;
+  
+}
+.edit-Button:hover {
+  background-color: #218838; 
+  box-shadow: 0 4px 10px rgba(27, 114, 48, 0.8);
+}
+
+.delete-Button {
+  background-color: #dc3545; 
+  color: white;
+}
+.delete-Button:hover {
+  background-color: #c82333; 
+  box-shadow: 0 4px 10px rgba(152, 36, 48, 0.8);
+}
+
+/* forms */
+
+form {
+  background-color: #2e2f30; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  margin: 20px auto;
+  text-align: left; 
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffffff; /* White form labels */
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #444; /* Slight border for input fields */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #3a3b3c; /* Dark background for inputs */
+  color: #ffffff; /* White text in inputs */
+}
+
+form button {
+  font-family: 'Poppins', sans-serif;
+  width: 45%;
+  padding: 10px;
+  margin: 10px 2.5%;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+#submitBook {
+  background-color: #3b82f6;
+  color: white;
+}
+#submitBook:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.8);
+}
+#cancelBook {
+  background-color: #ef4444;
+  color: white;
+}
+#cancelBook:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.8);
+}
+
+#statusOptions {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 50%;
+  margin: 20px auto;
+}
+body {
+  justify-content: flex-start;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  form {
+    width: 90%;
+  }
+}

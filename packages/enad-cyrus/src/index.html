@@ -1,8 +1,30 @@
-<html>
-  <head></head>
-  <body>
-    <p>hello world</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1>GIFT LIST</h1>
+    <div id="giftForm">
+        <input type="text" id="giftInput" placeholder="Enter gift name">
+        <button id="addGiftButton">Add</button>
+    </div>
 
-  <script src="script.js"></script>
+    <h2>IDEAS LIST</h2>
+    <ul id="ideasList"></ul>
+    <button id="addToBuyFromIdeasButton">Move to ToBuy</button>
+
+    <h2>TO BUY LIST</h2>
+    <ul id="toBuyList"></ul>
+    <button id="addToBoughtButton">Already Bought</button>
+
+    <h2>BOUGHT LIST</h2>
+    <ul id="boughtList"></ul>
+
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <section>
+        <div class="header">
+            <h1>Contact List</h1>
+        </div>
+        <fieldset>
+            <div class="inputfield">
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="fname" placeholder="Last Name" required>
+                <label for="email">Email </label>
+                <input type="email" id="email" name="fname" placeholder="Email" required>
+                <label for="number">Phone Number: </label>
+                <input type="number" id="number" name="number" placeholder="Phone Number" required>
+                <button id="addButton">Add</button>
+            </div>
+        <fieldset>
+    
+            <table id="contactTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

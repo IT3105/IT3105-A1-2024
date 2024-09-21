@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E9EFEC; /* Very light background */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 1.5em auto;
+    text-align: center;
+    font-size: 2.5em;
+    color: #16423C; /* Dark green for heading */
+}
+
+input, button {
+    width: 100%;
+    display: inline-block;
+    padding: 0.75em 1em;
+    margin-top: 0.5em;
+    border: 1px solid #6A9C89; /* Light green border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #E9EFEC; /* Very light background */
+    color: #333;
+}
+
+input:focus {
+    border-color: #16423C; /* Dark green for focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(22, 66, 60, 0.5);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    display: block;
+    color: #16423C; /* Dark green for labels */
+}
+
+fieldset {
+    max-width: 60%;
+    border: 1px solid #C4DAD2; /* Pale green border */
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #E9EFEC; /* Very light green */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.inputfield {
+    background-color: #C4DAD2; /* Pale green for input field background */
+    padding: 2em;
+    border-radius: 8px;
+    border: 1px solid #6A9C89; /* Light green border */
+    margin-bottom: 1.5em;
+}
+
+button {
+    background-color: #6A9C89; /* Light green for buttons */
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #16423C; /* Dark green on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5em;
+    background-color: #E9EFEC; /* Very light background for table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #6A9C89; /* Light green border for table rows */
+}
+
+th {
+    background-color: #C4DAD2; /* Pale green for table header */
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #16423C; /* Dark green for header text */
+}
+
+td {
+    font-size: 1em;
+    color: #333;
+}
+
+td button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td button.edit {
+    background-color: #6A9C89; /* Light green for edit buttons */
+    color: white;
+}
+
+td button.edit:hover {
+    background-color: #16423C; /* Dark green on hover */
+}
+
+td button.delete {
+    background-color: #16423C; /* Dark green for delete buttons */
+    color: white;
+}
+
+td button.delete:hover {
+    background-color: #113530; /* Even darker green for delete hover */
+}
+
+tr:hover {
+    background-color: #C4DAD2; /* Pale green on row hover */
+}
+
+@media (max-width: 768px) {
+    fieldset {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    input, button {
+        font-size: 0.9em;
+    }
+}

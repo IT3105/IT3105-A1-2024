@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+}
+header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1{
+    font-size: 2.5em;
+    color: #000000;
+}
+h2{
+    font-size: 1.5em;
+    color: #000000;
+}
+#add-recipe{
+    text-align: center;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: -300px;
+    align-self: center;
+}
+input, textarea{
+    padding: 10px;
+    margin-top: 10px;
+    width: 400px;
+    margin-bottom: 10px;
+    align-self: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+}
+textarea{
+    height: 50px;
+    resize: none;
+    border-radius: 10px;
+}
+button{
+    padding: 10px;
+    font-size: 1.5em;
+    color: white;
+    width: 400px;
+    align-self: center;
+    background-color: #008000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #FFD700;
+    color: #000000;
+}
+#show-recipes{
+    padding: 10px;
+    font-size: 1.5em;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    margin: 20px auto;
+    transform: translateX(210px);
+}
+#show-recipes:hover{
+    color: #567434;
+    text-decoration: underline;
+}

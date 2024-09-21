@@ -1,0 +1,115 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 70px 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 2cap;
+}
+
+h2 {
+    text-align: left;
+    padding-left: 80px;
+}
+
+#giftForm {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+.gift-checkbox {
+    width: 24px; 
+    height: 24px;
+}
+
+button {
+    border: none;
+    margin-left: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+    font-size: medium;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.button-container button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; 
+    transition: background-color 0.3s;
+}
+
+.button-container button.edit {
+    background-color: #28a745;
+}
+
+.button-container button.delete {
+    background-color: #dc3545;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.gift-item{
+    display: flex;
+    align-items: center;
+    padding: auto;
+    margin: auto;
+}
+
+.gift-checkbox {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    #giftForm, ul {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}

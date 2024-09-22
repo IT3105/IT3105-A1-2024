@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Budget Tracker</title>
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffe4e1; /* Soft pink background */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #ffffff; 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        width: 325px;
+        text-align: center;
+        border: 2px solid #f5b2c1; 
+    }
+
+    h1, h2, h3 {
+        margin: 10px 0;
+        color: #f25b8e; 
+    }
+
+    input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #f25b8e; 
+        border-radius: 4px;
+        transition: border-color 0.3s;
+    }
+
+    input:focus {
+        border-color: #ff1493; /* Deeper pink on focus */
+        outline: none; 
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #fc6695; 
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff1493; 
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #ffe4e1; 
+        margin: 10px 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid #f5b2c1; 
+    }
+
+    li button {
+        background-color: #dc3545;
+        margin-top:auto;
+        margin-bottom: auto;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    li button:hover {
+        background-color: #c82333; /* Darker red on hover */
+    }
+  </style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><i>✨Budget Tracker✨</i></h1>
+
+    <!-- Form for adding new categories and expenses -->
+    <div class="form-container">
+        <form id="expense-form">
+            <input type="text" id="category" placeholder="Category" required minlength="2">
+            <input type="number" id="amount" placeholder="Amount" required min="0.01" step="0.01">
+            <button type="submit" id="add-expense"><strong>Add Expense</strong></button>
+        </form>
+    </div>
+
+    <!-- Display list of expenses -->
+    <h2>💸<u>Expenses</u>💸</h2>
+    <ul id="expense-list"></ul>
+
+    <!-- Display total -->
+    <h3>Total: ₱<span id="total-amount">0</span></h3>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+
+
+

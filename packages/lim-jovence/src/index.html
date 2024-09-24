@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Timer</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=kZYJCScZSxUH&format=png&color=000000" type="image/x-icon">
+    <link rel="stylesheet" href="task-timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>   
+</head>
+<body>
+    <main class="container">
+        <div class="left-container">
+            <div class="timer-container">
+                <div class="timer-title">
+                    <h4>Pomodoro</h4>
+                </div>
+                <div class="time">
+                    <p id="timer">25:00</p>
+                </div>
+                <div class="timer-control">
+                    <button class="start-btn" id="start-btn"><h3>START</h3></button>
+                    <button class="pause-btn" id="pause-btn" style="display: none;"><h3>PAUSE</h3></button>
+                    <button class="reset-btn" id="reset-btn" title="reset">
+                        <i class="fa-solid fa-rotate-right">
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <div class="task-count-container">
+                <!-- <h3 id="task-count">Task count: <span id="count">0</span></h3> -->
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="task-container">
+                <div class="task-title">
+                    <h4>Tasks</h4>
+                    <div class="hr-line">
+                        <hr>
+                    </div>
+                </div>
+                <div class="add-task-container">
+                    <div class="add-task-icon">
+                        <i class="fa-solid fa-circle-plus plus-icon"></i>
+                    </div>
+                    <div class="add-task-title">
+                        <span>Add Task</span>
+                    </div>
+                </div>
+                <div class="input-task-container">
+                    <div class="task-input-container" style="padding: 5px;">
+                        <form id="form-control">
+                            <input class="task-input" id="task-input" type="text" autocomplete="off">
+                        </form>
+                    </div>
+                    <div class="task-control-container">
+                        <button class="delete-btn">Delete</button>
+                        <div class="input-control-container">
+                            <button class="cancel-btn">Cancel</button>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-list-container">
+                    <button class="reset-task"></button>
+                    <div class="list-container" id="list-container">
+                        No task yet
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/src/script.js"></script>
+</body>
+</html>

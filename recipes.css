@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+header{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+#go-back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #008000;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+#go-back:hover{
+    background-color: #FFD7007a;
+}
+h1{
+    font-size: 2.5em;
+    color: #000000;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+#recipe-storage{
+    padding: 15px;
+}
+#recipe-storage ul{
+    margin-top: 20px;
+}
+.edit-btn, .delete-btn{
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-btn{
+    background-color: #007BFF;
+    color: white;
+    background-color: #008000;
+}
+.edit-btn:hover{
+    background-color: #FFD7007a;
+}
+.delete-btn{
+    color: white;
+    background-color: #008000;
+}
+.delete-btn:hover{
+    background-color: #FFD7007a;
+}

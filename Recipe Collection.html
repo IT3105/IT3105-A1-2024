@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Recipe Collection</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <h2>Add New Recipe</h2>
+            <form id="recipe-form">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" name="recipe-name" required>
+
+                <label for="recipe-ingredients">Ingredients:</label>
+                <textarea id="recipe-ingredients" name="recipe-ingredients" required></textarea>
+
+                <label for="recipe-instructions">Instructions:</label>
+                <textarea id="recipe-instructions" name="recipe-instructions" required></textarea>
+
+                <button type="submit">ADD RECIPE</button>
+            </form>
+        </section>
+        <section id="recipe-list">
+            <button1 id="show-recipes" onclick="location.href='recipes.html'">Click this to see your recipe's</button1>
+        </section>
+    </main>
+    <script src="recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+header{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1{
+    color: #000000;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input, textarea{
+    margin: 15px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 500px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+button{
+    background-color: #008000;
+    color: white;
+    font-size: 1.2em;
+    border: 1px solid #FFD7007a;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px auto;
+    border-radius: 20px;
+    width: 400px;
+    font-size: 22px;
+}
+.seeBTN{
+    background-color: #008000;
+    color: white;
+    font-size: 1.2em;
+    border: 1px solid #FFD7007a;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px auto;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 22px;
+    display: block;
+}
+.seeBTN:hover{
+    background-color: #FFD7007a;
+}
+button:hover{
+    background-color: #FFD7007a;
+}

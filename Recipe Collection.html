@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add a New Recipe</h1>
+    </header>
+
+    <main>
+        <form id="recipe-form">
+            <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+            <textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+            <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+            <button type="submit">Add Recipe</button>
+        </form>
+        <button id="view-recipes" class="seeBTN" onclick="window.location.href='recipes.html';">Click this to see your recipes</button>
+    </main>
+    
+    <script src="recipes.js"></script>
+</body>
+</html>

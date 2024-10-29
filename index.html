@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jaja's Meal Planner</h1>
+    
+    <form id="mealForm">
+      <input type="text" id="mealInput" placeholder="Enter meal" required>
+      <select id="daySelect">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+      <button type="submit">Add Meal</button>
+    </form>
+
+    <h2>MEAL PLAN</h2>
+    <ul id="mealList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

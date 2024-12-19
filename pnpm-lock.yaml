@@ -12,6 +12,8 @@ importers:
         specifier: ^14.1.1
         version: 14.1.1
 
+  packages/campos-elijah: {}
+
   packages/copy-me: {}
 
 packages:

@@ -1,0 +1,101 @@
+body{
+    background-color: aliceblue;
+    height: 1000px;
+}
+
+.header{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    background-color: rgb(215, 233, 248);
+    border-bottom-color: rgb(234, 234, 234);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    z-index: 100;
+    
+}
+
+.AppName{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.Inventory-grid{
+    width: 1250px;
+    height: 570px;
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 70px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.Inventory-title{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+.inventory-item{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-button{
+    margin-left: 30px;
+    display: inline-block;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 255, 170);
+    color: white;
+}
+
+.delete-button{
+    margin-left: 30px;
+    display: inline-block;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;    
+    color: white;
+    background-color: rgb(255, 26, 26);
+}

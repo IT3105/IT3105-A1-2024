@@ -1,0 +1,12 @@
+{
+  "name": "cabogoy-zyguel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

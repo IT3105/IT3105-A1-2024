@@ -1,0 +1,54 @@
+.workout-table-container {
+    background-color: var(--card-bg-color); 
+    color: var(--text-color); 
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.workout-table {
+    color: var(--text-color); 
+    border: 1px solid var(--border-color); 
+}
+
+.workout-table th, .workout-table td {
+    border: 1px solid var(--border-color); 
+    color: var(--text-color); 
+}
+
+.workout-table th {
+    background-color: var(--button-bg-color);
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.pagination-container .page-link {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 1rem; 
+}
+
+.pagination-container .page-link:hover {
+    background-color: #555;
+}
+
+.pagination-container .page-link.disabled {
+    background-color: var(--card-bg-color);
+    color: #888; 
+    border-color: var(--border-color); 
+}
+
+.mx-2 {
+    color: var(--text-color);
+    font-size: 1rem; 
+}
